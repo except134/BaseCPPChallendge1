@@ -14,5 +14,6 @@ public:
 	int Run();
 
 private:
+	Screen screen;
 	Actor actor;
 };

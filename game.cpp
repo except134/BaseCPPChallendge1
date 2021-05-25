@@ -2,7 +2,8 @@
 
 int Game::Run()
 {
-	actor.Init("Super game", 5);
+	screen.Init("Super game", FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+	actor.Init(&screen, 5);
 
 	int keyPressed = 0;
 

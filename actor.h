@@ -8,10 +8,10 @@ public:
 	enum Direction { RIGHT, LEFT, UP, DOWN };
 
 public:
-	void Init(const char* name, int sz = 8, COORD Pos=COORD{ 0,0 })
+	void Init(Screen* scr, int sz = 8, COORD Pos=COORD{ 0,0 })
 	{
+		screen = scr;
 		size = sz;
-		screen.Init(name, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 		leftTop = Pos; 
 		Draw();
 	}
@@ -25,7 +25,7 @@ public:
 	short GetBottom() { return leftTop.Y + size; }
 
 private:
-	Screen screen;
+	Screen* screen;
 	COORD leftTop{ 0,0 };		// положение левого верхнего угла
 	char fillChar{ char(177) };	// символ рисования
 	char delChar{ ' ' };		// символ затирания
