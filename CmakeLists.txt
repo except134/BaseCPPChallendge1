@@ -1,3 +1,3 @@
 cmake_minimum_required(VERSION 2.8)
 project(Challenge1)
-add_executable(main main.cpp)
+add_executable(challenge1 main.cpp screen.cpp actor.cpp game.cpp screen.h actor.h game.h)
